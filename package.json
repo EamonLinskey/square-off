@@ -1,5 +1,5 @@
 {
-  "homepage": "http://patrickshox.github.io/square-off",
+  "homepage": "https://patrickshox.github.io/square-off",
   "name": "react-client",
   "version": "0.1.0",
   "proxy": "https://square-off-backend.herokuapp.com",
