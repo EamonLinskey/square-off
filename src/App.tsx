@@ -20,7 +20,6 @@ function App() {
   const connectSocket = async () => {
     const socket = await socketService
       .connect("https://square-off-backend.herokuapp.com")
-      //.connect("http://ancient-earth-60055.herokuapp.com")
       .catch((err) => {
         console.log("Error: ", err);
       });
@@ -50,7 +49,7 @@ function App() {
   return (
     <GameContext.Provider value={gameContextValue as GameContextProps}>
       <div className="App">
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
           <Routes>
             <Route path="/login/" element = {<Login />} />
             <Route path="/play/" element ={<>{!isInRoom && <JoinRoom />} {isInRoom && <Game />}</>}/>
