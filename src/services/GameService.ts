@@ -7,7 +7,9 @@ import { User, PlayerMap } from "../types"
 class GameService {
   public async joinGameRoom(socket: Socket, roomId: string, user: User): Promise<boolean> {
     return new Promise((rs, rj) => {
-      socket.emit("join_game", { roomId , firstName: user.firstName, photoUrl: user.photoUrl });
+      console.log(user)
+      alert("a")
+      socket.emit("join_game", { roomId , firstName: "jimmy", photoUrl: "afd" });
       socket.on("room_joined", () => rs(true));
       socket.on("room_join_error", ({ error }) => rj(error));
     });
