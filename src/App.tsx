@@ -50,7 +50,7 @@ function App() {
   return (
     <GameContext.Provider value={gameContextValue as GameContextProps}>
       <div className="App">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/login/" element = {<Login />} />
             <Route path="/play/" element ={<>{!isInRoom && <JoinRoom />} {isInRoom && <Game />}</>}/>
