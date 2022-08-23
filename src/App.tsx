@@ -5,7 +5,7 @@ import { JoinRoom } from "./components/JoinRoom";
 import GameContext, { GameContextProps } from "./gameContext";
 import { Game } from "./components/Game"
 import { Login } from "./components/Login"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Player, User, PlayerMap } from "./types"
 import axios from "axios"
 import gameService from "./services/GameService";
